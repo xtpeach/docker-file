@@ -1,1 +1,1 @@
-docker build -t openjdk-with-python-ffmpeg .
+docker build -t openjdk-with-python-ffmpeg-you-get .
