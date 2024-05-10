@@ -10,4 +10,4 @@ RUN apt-get install -y ffmpeg
 RUN pip install you-get
 
 # 替换You-Get中的bilibili.py文件
-COPY bilibili.py /bilibili.py
+COPY bilibili.py /usr/local/lib/python3.9/dist-packages/you_get/extractors/bilibili.py
