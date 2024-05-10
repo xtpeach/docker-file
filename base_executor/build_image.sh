@@ -1,0 +1,1 @@
+docker build -t my-openjdk-with-python-ffmpeg .
