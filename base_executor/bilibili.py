@@ -335,7 +335,7 @@ class Bilibili(VideoExtractor):
                                                             'src': [[baseurl]], 'size': size}
 
             # get danmaku
-            self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid)
+            self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid, headers=self.bilibili_headers())
 
         # bangumi
         elif sort == 'bangumi':
@@ -414,7 +414,7 @@ class Bilibili(VideoExtractor):
                                                         'src': [[baseurl], [audio_baseurl]], 'size': size}
 
             # get danmaku
-            self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid)
+            self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid, headers=self.bilibili_headers())
 
         # vc video
         elif sort == 'vc':
@@ -596,7 +596,7 @@ class Bilibili(VideoExtractor):
                                                         'src': [[baseurl]], 'size': size}
 
         # get danmaku
-        self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid)
+        self.danmaku = get_content('http://comment.bilibili.com/%s.xml' % cid, headers=self.bilibili_headers())
 
     def extract(self, **kwargs):
         # set UA and referer for downloading
